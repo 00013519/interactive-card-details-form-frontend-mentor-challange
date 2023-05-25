@@ -1,0 +1,154 @@
+html{
+    font-size: 18px;
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.container{
+    margin: 0;
+}
+.header{
+    background-image: url("../images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+    height: 340px;
+
+
+    .cards{
+        width: 400px;
+        height: 220px;
+        padding: 20px;
+        position: absolute;
+        right: 5vw;
+        color: white;
+        letter-spacing: 4px;
+        border: none;
+        background-image: url("../images/bg-card-back.png");
+        background-size: cover;
+
+
+        .cvv{
+            position: absolute;
+            top: 95px;
+            right: 50px;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+    .front-card{
+        background-image: url("../images/bg-card-front.png");
+        top: 178px;
+        left: 5vw;
+        .card-number{
+            font-size: 1.2rem;
+        }
+        .cf-bottom{
+            font-size: 0.8rem;
+            justify-content: space-between;
+        }
+    }
+
+}
+.card-form-section{
+    width: 450px;
+    margin: 130px auto;
+    letter-spacing: 2px;
+    .errors{
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        color: hsl(0, 100%, 66%);
+    }
+
+    .form-control{
+        font-size: 1.3rem;
+
+        &::placeholder{
+            opacity: 0.5;
+            font-size: 1rem;
+        }
+        &:focus{
+            border: 1px solid #600594;
+            box-shadow: none;
+        }
+        
+    }
+    .btn{
+        background-color: hsl(278, 68%, 11%);
+        &:hover{
+            scale: 1.03;
+        }
+    }
+    
+}
+#form-completed{
+    display: none;
+    width: 450px;
+    margin: auto;
+    
+}
+@media (min-width: 700px){
+    .header{
+
+        .front-card{
+            left: 15vw;
+        }
+        .back-card{
+            right: 15vw;
+        }
+    }
+}
+@media (min-width: 1000px){
+    .container-fluid{
+        display: flex;
+        justify-content: space-between;
+
+        .header{
+            flex-basis: 30%;
+            height: auto;
+            background-image: url("../images/bg-main-desktop.png");
+            .back-card{
+                top: 60vh;
+                left: 6vw;
+            }
+            .front-card{
+                top: 15vh;
+                left: 2vw;
+            }
+        }
+        .card-form-section{
+            flex-basis: 70%;
+            padding-right: 10px;
+            justify-content: flex-end;
+            position: relative;
+            form{
+                width: 450px;
+                position: relative;
+                right: -23vw;
+            }
+        }
+        #form-completed{
+            margin-left: 220px;
+        }
+    }
+}
+@media (min-width: 1300px){
+    .container-fluid{
+
+        .header{
+            .back-card{
+                left: 15vw;
+            }
+            .front-card{
+                left: 8vw;
+            }
+        }
+        #form-completed{
+            margin-left: 350px;
+        }
+    }
+}
