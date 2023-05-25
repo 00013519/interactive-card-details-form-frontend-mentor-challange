@@ -17,11 +17,11 @@ html{
     margin: 0;
     position: relative;
     height: 340px;
-
+    width: 100%;
 
     .cards{
-        width: 400px;
-        height: 220px;
+        width: 383px;
+        height: 210px;
         padding: 20px;
         position: absolute;
         right: 5vw;
@@ -34,7 +34,7 @@ html{
 
         .cvv{
             position: absolute;
-            top: 95px;
+            top: 90px;
             right: 50px;
             color: white;
             font-size: 1rem;
@@ -55,7 +55,7 @@ html{
 
 }
 .card-form-section{
-    width: 450px;
+    width: 400px;
     margin: 130px auto;
     letter-spacing: 2px;
     .errors{
@@ -63,7 +63,9 @@ html{
         font-size: 0.8rem;
         color: hsl(0, 100%, 66%);
     }
-
+    .form-label{
+        font-size: 0.9rem;
+    }
     .form-control{
         font-size: 1.3rem;
 
@@ -87,7 +89,7 @@ html{
 }
 #form-completed{
     display: none;
-    width: 450px;
+    width: 400px;
     margin: auto;
     
 }
